@@ -75,12 +75,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    overflow:auto;
+}
+.weather-dashboard__section--forecast::-webkit-scrollbar {
+    height: 0;
 }
 
 .forecast__time {
     text-align: center;
     flex: 1;
     font-size: 1.2rem;
+    min-width: 130px;
 }
 
 .forecast__icon {
@@ -97,7 +102,10 @@ body {
 
 .details__item {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
     background: linear-gradient(145deg, #324a6c, #456b80);
     padding: 15px;
     border-radius: 10px;
@@ -115,6 +123,11 @@ body {
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #4e688a;
+}
+.weekly__day div {
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .weekly__day:last-child {
