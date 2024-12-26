@@ -77,10 +77,23 @@ body {
     padding: 15px 0;
     overflow:auto;
 }
-.weather-dashboard__section--forecast::-webkit-scrollbar {
-    height: 0;
+
+.weather-dashboard__section--forecast::-webkit-scrollbar {  
+    width: 10px;
+    height: 5px;
 }
 
+.weather-dashboard__section--forecast::-webkit-scrollbar-track {
+    background: #243860;
+    border-radius: 10px;
+}   
+
+.weather-dashboard__section--forecast::-webkit-scrollbar-thumb {
+    background: #00bfff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 300px;
+}
 .forecast__time {
     text-align: center;
     flex: 1;
@@ -101,13 +114,15 @@ body {
 }
 
 .details__item {
+    max-width: auto;
+    max-height: auto;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
     background: linear-gradient(145deg, #324a6c, #456b80);
-    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(13, 116, 255, 0.3);
