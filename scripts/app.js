@@ -59,6 +59,7 @@ function createWeatherCards(data) {
 }
 function createWeeklyCards(data) {
     const days = data.forecast.forecastday;
+    weeklyEl.innerHTML = null;
     days.forEach(day => {
         const weeklyCardEl = document.createElement('div');
         weeklyCardEl.classList.add('weekly__day');
